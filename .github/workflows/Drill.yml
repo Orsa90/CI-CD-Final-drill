@@ -1,3 +1,32 @@
 # Workflow for CI/CD final drill
 
 name: CI/CD - Final
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+      - feature/*
+
+jobs:
+  tests:
+    name: Thanos-checklist
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull repo
+        uses: actions/checkout@v3
+
+      - name: Simulate environment check
+        run: |
+          echo "Checking for required files..."
+          if [ -f README.md ]; then
+            echo "README exists ✅"
+            exit 0
+          else
+            echo "README missing ❌"
+            exit 1
+          fi
+
