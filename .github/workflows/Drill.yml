@@ -30,3 +30,8 @@ jobs:
             exit 1
           fi
 
+      - name: Run check/create script
+        run: bash ./scripts/check_or_create.sh
+
+      - name: Run env logic script
+        run: bash ./scripts/check_dep_env.sh
