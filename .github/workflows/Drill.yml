@@ -24,6 +24,7 @@ jobs:
           echo "Checking for required files..."
           if [ -f README.md ]; then
             echo "README exists ✅"
+            exit 0
           else
             echo "README missing ❌"
             exit 1
