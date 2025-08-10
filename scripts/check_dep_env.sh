@@ -1,9 +1,10 @@
 #!/bin/bash
 
-echo "🧠 Determining environment..."
+echo "🧠 Deploying with secret: $DRILL_ENV"
 
-if [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
-  echo "🚀 Deploying to PRODUCTION environment"
+if [ "$DRILL_ENV" == "Thanos" ]; then
+  echo "💥 Destroying half the branches... kidding 😏"
+  echo "🚀 Deploying to THANOS-grade PROD environment"
 else
   echo "🧪 Deploying to STAGING environment"
 fi
