@@ -12,6 +12,6 @@ on:
       - feature/*
 
 jobs:
-  build:
+
     runs-on: ubunto-latest
 
