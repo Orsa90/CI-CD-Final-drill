@@ -14,7 +14,7 @@ on:
 jobs:
   tests:
     name: Thanos-checklist
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     steps:
       - name: pull repo
         uses: actions/checkout@v3
