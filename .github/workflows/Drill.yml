@@ -15,6 +15,10 @@ jobs:
   tests:
     name: Thanos-checklist
     runs-on: ubuntu-latest
+    env:
+      DRILL_CI_CD: ${{ secrets.DRILL_CI_CD }}
+
+
     steps:
       - name: pull repo
         uses: actions/checkout@v3
