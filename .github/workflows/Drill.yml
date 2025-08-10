@@ -3,6 +3,7 @@
 name: CI/CD - Final
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - main
