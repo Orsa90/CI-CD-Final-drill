@@ -16,7 +16,7 @@ jobs:
     name: Thanos-checklist
     runs-on: ubuntu-latest
     env:
-      "$DEPLOY_ENV": ${{ secrets.DEPLOY_ENV }}
+      "$DRILL_ENV": ${{ secrets.drill_ci_cd }}
 
 
     steps:
