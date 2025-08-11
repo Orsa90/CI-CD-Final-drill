@@ -42,3 +42,9 @@ jobs:
 
       - name: Run env logic script
         run: bash ./scripts/check_dep_env.sh
+
+      - name: Final status notification
+        if: always()
+        run: |
+          echo "📣 Deployment completed on branch: $GITHUB_REF"
+          echo "✅ Status: ${{ job.status }}"
